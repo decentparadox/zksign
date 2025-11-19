@@ -1,0 +1,23 @@
+{
+  "name": "@zksign/zk-circuits",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "compile-circuits": "node scripts/compile-circuits.js",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@noir-lang/noir_js": "^0.31.0",
+    "@noir-lang/backend_barretenberg": "^0.31.0",
+    "@noir-lang/types": "^0.31.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@zksign/typescript-config": "workspace:*",
+    "typescript": "^5.3.3"
+  }
+}
+
