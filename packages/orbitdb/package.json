@@ -1,0 +1,24 @@
+{
+  "name": "@zksign/orbitdb",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@orbitdb/core": "^2.0.0",
+    "@helia/unixfs": "^3.0.0",
+    "helia": "^4.0.0",
+    "libp2p": "^1.0.0",
+    "multiformats": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@zksign/typescript-config": "workspace:*",
+    "typescript": "^5.3.3"
+  }
+}
+

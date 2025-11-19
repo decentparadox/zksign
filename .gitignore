@@ -37,7 +37,7 @@ next-env.d.ts
 .turbo
 
 # OrbitDB
-orbitdb/
+
 
 # IPFS
 .ipfs/
