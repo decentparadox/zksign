@@ -1,12 +1,11 @@
 import type { Config } from "tailwindcss";
-import sharedConfig from "@zksign/ui/tailwind.config";
 
 const config: Config = {
-  ...sharedConfig,
   content: [
     "./src/**/*.{ts,tsx}",
     "../../packages/ui/src/**/*.{ts,tsx}",
   ],
+  presets: [require("../../packages/ui/tailwind.config.ts")],
 };
 
 export default config;

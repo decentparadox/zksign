@@ -4,6 +4,7 @@ import { WagmiProvider, createConfig, http } from "wagmi";
 import { sepolia, hardhat } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { injected } from "wagmi/connectors";
+import { Toaster } from "@zksign/ui";
 import { ReactNode, useState } from "react";
 
 const config = createConfig({
@@ -17,21 +18,15 @@ const config = createConfig({
   },
 });
 
-interface Web3ProviderProps {
-  children: ReactNode;
-}
-
-export function Web3Provider({ children }: Web3ProviderProps) {
+export function Providers({ children }: { children: ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         {children}
+        <Toaster />
       </QueryClientProvider>
     </WagmiProvider>
   );
 }
-
-export { config as wagmiConfig };
-

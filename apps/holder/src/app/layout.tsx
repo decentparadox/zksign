@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@zksign/ui/styles/globals.css";
-import { Web3Provider, Toaster } from "@zksign/ui";
+import "../../../../packages/ui/src/styles/globals.css";
+import { Providers } from "../components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Web3Provider>
-          {children}
-          <Toaster />
-        </Web3Provider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

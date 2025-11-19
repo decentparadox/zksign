@@ -4,6 +4,15 @@
   "private": true,
   "main": "./src/index.tsx",
   "types": "./src/index.tsx",
+  "exports": {
+    ".": "./src/index.tsx",
+    "./styles": "./src/styles/globals.css",
+    "./styles/globals.css": "./src/styles/globals.css",
+    "./tailwind.config": "./tailwind.config.ts",
+    "./tailwind.config.ts": "./tailwind.config.ts",
+    "./postcss.config": "./postcss.config.js",
+    "./postcss.config.js": "./postcss.config.js"
+  },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit"
