@@ -17,8 +17,8 @@ export * from "./components/qr-code-display";
 export * from "./components/qr-scanner";
 export * from "./components/onchain-verification-status";
 
-// Providers
-export * from "./providers/web3-provider";
+// Hooks
+export * from "./hooks/use-wallet";
 
 // Utils
 export * from "./lib/utils";

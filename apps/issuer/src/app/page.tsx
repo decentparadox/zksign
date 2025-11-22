@@ -1,12 +1,11 @@
 "use client";
 
-import { useAccount } from "wagmi";
-import { WalletConnect, Card, CardHeader, CardTitle, CardDescription, CardContent, Button } from "@zksign/ui";
+import { useWallet, WalletConnect, Card, CardHeader, CardTitle, CardDescription, CardContent, Button } from "@zksign/ui";
 import Link from "next/link";
 import { CreditCard, UserCheck, FileText, Car } from "lucide-react";
 
 export default function HomePage() {
-  const { isConnected, address } = useAccount();
+  const { isConnected, address } = useWallet();
 
   return (
     <main className="min-h-screen p-8">

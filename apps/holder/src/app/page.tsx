@@ -1,12 +1,11 @@
 "use client";
 
-import { useAccount } from "wagmi";
-import { WalletConnect, Card, CardHeader, CardTitle, CardDescription, CardContent, Button, CredentialCard } from "@zksign/ui";
+import { useWallet, WalletConnect, Card, CardHeader, CardTitle, CardDescription, CardContent, Button, CredentialCard } from "@zksign/ui";
 import Link from "next/link";
 import { Plus, Wallet } from "lucide-react";
 
 export default function HomePage() {
-  const { isConnected, address } = useAccount();
+  const { isConnected, address } = useWallet();
 
   // Mock credentials for demonstration
   const mockCredentials = [

@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { useAccount } from "wagmi";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, Input, Label, Button, toast } from "@zksign/ui";
+import { useWallet, Card, CardHeader, CardTitle, CardDescription, CardContent, Input, Label, Button, toast } from "@zksign/ui";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export default function IssueCollegeIDPage() {
-  const { address, isConnected } = useAccount();
+  const { address, isConnected } = useWallet();
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
